@@ -6,9 +6,11 @@
   --accent-color: #4d5ae5;
   --hover-focus-color: #404bbf;
   --text-color-theme-dark: #f4f4fd;
+  --text-color-theme-dark-secondary: #fff;
   --background-color-light: #f4f4fd;
   --background-color-dark: #2e2f42;
   --border-btn: #e7e9fc;
+  --color-icon-customers-border: #8e8f99;
 }
 
 .list {
@@ -80,6 +82,8 @@ img {
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -140,7 +144,7 @@ img {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--text-color-theme-dark-secondary);
   margin-right: auto;
   margin-left: auto;
 }
@@ -152,9 +156,14 @@ img {
     ),
     url(../images/hero/people-office.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
 }
 .hero-container {
   padding: 188px 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 .btn-order {
   display: block;
@@ -171,7 +180,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--text-color-theme-dark-secondary);
   background: var(--accent-color);
 }
 .btn-order:hover,
@@ -207,6 +216,7 @@ img {
   height: 112px;
   display: flex;
   margin-bottom: 8px;
+  border-radius: 4px;
 }
 .feautures-icon {
   justify-content: center;
@@ -232,7 +242,7 @@ img {
 
 .activity-tittle,
 .team-tittle,
-.custumers-tittle {
+.customers-tittle {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -278,13 +288,13 @@ img {
   gap: 24px;
 }
 .team-text {
-  padding: 32px 16px;
+  padding: 32px 0;
   text-align: center;
 }
 .social-list {
   display: flex;
   justify-content: center;
-  column-gap: 24px;
+  gap: 24px;
 }
 .social-link {
   display: flex;
@@ -299,14 +309,20 @@ img {
 .social-link:focus {
   background-color: var(--hover-focus-color);
 }
-/* Custumers */
-.custumers-list {
+.social-icon {
+  fill: var(--text-color-theme-dark);
+}
+/* Customers */
+.customers-tittle {
+  line-height: 1.1;
+}
+.customers-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 24px;
+  gap: 24px;
 }
-.custumers-link {
+.customers-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,13 +330,15 @@ img {
   height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  color: var(--color-icon-customers-border);
 }
-.custumers-icon {
-  fill: #8e8f99;
+.customers-icon {
+  fill: currentColor;
 }
-.custumers-icon:hover,
-.custumers-icon:focus {
-  fill: var(--hover-focus-color);
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--hover-focus-color);
+  color: var(--hover-focus-color);
 }
 
 /* Footer */
@@ -361,7 +379,7 @@ img {
 .soc-media-list {
   display: flex;
   justify-content: center;
-  column-gap: 16px;
+  gap: 16px;
 }
 .soc-media-link {
   display: flex;
@@ -378,6 +396,7 @@ img {
 }
 .container-footer-text {
   display: flex;
+  align-items: baseline;
 }
 .footer-text-first {
   margin-right: 120px;
@@ -389,7 +408,10 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: var(--text-color-theme-dark-secondary);
+}
+.soc-media-icon {
+  fill: var(--text-color-theme-dark);
 }
 
 /* Portfolio */
@@ -411,10 +433,12 @@ img {
 .btn-filter:hover,
 .btn-filter:focus {
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn-filter:active {
   background-color: var(--hover-focus-color);
-  color: #fff;
+  color: var(--text-color-theme-dark-secondary);
 }
 /* Projects */
 .projects {
@@ -452,13 +476,16 @@ img {
   width: calc((100% - 48px) / 3);
   background-color: #ffffff;
 }
-.projects-item:hover,
-.projects-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
 .projects-text {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+.projects-link {
+  display: block;
+}
+.projects-link:hover,
+.projects-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
